@@ -1,0 +1,50 @@
+body{
+    margin: 50px auto;
+    overflow: hidden;
+    background: #978484;
+}
+.numbers{
+    font-family: 'Courier New', Courier, ;
+    color: #ddd;
+    font-size: 155px;
+    text-align: center;
+    line-height: 1em;
+    overflow: hidden;
+}
+.monitor_nmbs{
+    display: inline-block;
+    overflow: hidden;
+    width: 0.5em;
+    height: 1em;
+}
+.digit{
+    display: block;
+    margin: 0 auto;
+    font: inherit;
+    overflow: inherit;
+    word-break: break-all;
+    width: 0;
+    padding: 0 0.52em 0 0;
+    animation: counting 0.4s steps(10) forwards infinite;
+
+}
+.digit::before{
+    display: inline-block;
+    content: attr(fake-data);
+    width: 100%;
+    height: auto;
+}
+.count{
+    animation-iteration-count: 3;
+}
+.count-2{
+    animation-iteration-count: 6;
+}
+.count-3{
+    animation-iteration-count: 9;
+}
+@keyframes counting {
+    100%{
+        transform: translate3d(0, -10em,0);
+    }
+}
